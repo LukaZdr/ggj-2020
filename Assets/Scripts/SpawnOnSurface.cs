@@ -23,7 +23,7 @@ public class SpawnOnSurface : MonoBehaviour
 
     void Update()
     {
-        if (((int) Time.time) % rayInterval == 0)
+        if (Time.time > 0 && ((int) Time.time) % rayInterval == 0)
         {
             var direction = Random.onUnitSphere;
             var ray = new Ray(raySpawn.position, direction);
