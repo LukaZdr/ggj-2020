@@ -10,7 +10,7 @@ public class SpawnOnSurface : MonoBehaviour
     [Tooltip("Maximum distance the ray will go until it is considered not-hitting")]
     public float maxRaycastDistance = 100;
     [Tooltip("How many seconds to wait between casting rays")]
-    public int rayInterval = 10;
+    public int rayInterval = 100;
     [Tooltip("Prefab which gets instantiated on the objects surface")]
     public GameObject prefab;
 
@@ -44,5 +44,10 @@ public class SpawnOnSurface : MonoBehaviour
 
         // we intentionally dont use _objectCollider.Raycast() because we want to honor intersections with other objects
         return Physics.Raycast(ray, out hit, maxRaycastDistance) && hit.collider == _objectCollider;
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.DrawSphere(raySpawn.position, maxRaycastDistance);
     }
 }

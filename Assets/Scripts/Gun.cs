@@ -44,7 +44,8 @@ public class Gun : MonoBehaviour
     {
         lastShotTime = Time.time;
         GameObject _projectile = Instantiate(projectile, projectileSpawn.position, projectileSpawn.rotation * projectile.transform.rotation);
-        _projectile.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed);
+        Rigidbody rb = _projectile.GetComponent<Rigidbody>();
+        _projectile.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed * rb.mass);
         GameObject.Destroy(_projectile, despawnTime);
     }
 }
