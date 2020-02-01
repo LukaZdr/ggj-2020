@@ -195,6 +195,26 @@ PrefabInstance:
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 3985319841997591155, guid: 78f50ddc80f5a5645b2e443ca9abc574,
+        type: 3}
+      propertyPath: ForceModule.inWorldSpace
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3985319841997591155, guid: 78f50ddc80f5a5645b2e443ca9abc574,
+        type: 3}
+      propertyPath: InitialModule.gravityModifier.scalar
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3985319841997591155, guid: 78f50ddc80f5a5645b2e443ca9abc574,
+        type: 3}
+      propertyPath: ForceModule.z.scalar
+      value: 9.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 3985319841997591155, guid: 78f50ddc80f5a5645b2e443ca9abc574,
+        type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7907092295980589426, guid: 78f50ddc80f5a5645b2e443ca9abc574,
         type: 3}
       propertyPath: m_LocalPosition.z

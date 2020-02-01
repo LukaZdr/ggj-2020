@@ -45,9 +45,5 @@ public class SpawnOnSurface : MonoBehaviour
         // we intentionally dont use _objectCollider.Raycast() because we want to honor intersections with other objects
         return Physics.Raycast(ray, out hit, maxRaycastDistance) && hit.collider == _objectCollider;
     }
-
-    void OnDrawGizmos()
-    {
-        Gizmos.DrawSphere(raySpawn.position, maxRaycastDistance);
-    }
+    
 }
