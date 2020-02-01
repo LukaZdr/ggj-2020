@@ -7,6 +7,9 @@ TagManager:
   - projectile
   - FxTemporaire
   - Bolt
+  - BoltTarget
+  - Kohlehaufen
+  - Ofen
   layers:
   - Default
   - TransparentFX

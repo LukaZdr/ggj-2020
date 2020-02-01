@@ -33,6 +33,7 @@ public class Gun : MonoBehaviour
             SteamVR_Input_Sources hand = interactable.attachedToHand.handType;
             bool b_fire = actionFire.GetState(hand);
 
+            //TODO: Singe action
             if (b_fire && Time.time > lastShotTime+1/shotsPerSec)
             {
                 Fire();

@@ -230,9 +230,10 @@ GameObject:
   - component: {fileID: 4574727168276569794}
   - component: {fileID: 7800299925849236027}
   - component: {fileID: 2851961913464019184}
+  - component: {fileID: 8847927802331531679}
   m_Layer: 0
   m_Name: Kessel
-  m_TagString: Untagged
+  m_TagString: Ofen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -315,6 +316,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3697224441000155326, guid: a5bc85f6cdacf8340aa09b00523d2f56, type: 3}
+--- !u!65 &8847927802331531679
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8393844908790503143}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0025037453, y: 0.010055056, z: 0.008677913}
+  m_Center: {x: -0.009008247, y: -0.00009467623, z: 0.00025324032}
 --- !u!1 &8608150398687659068
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,6 +599,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2568813226947275614, guid: 39b051acb09f0bd4cbf6fcbf379d1c65,
+        type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2568813226947275614, guid: 39b051acb09f0bd4cbf6fcbf379d1c65,
+        type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2568813226947275614, guid: 39b051acb09f0bd4cbf6fcbf379d1c65,
+        type: 3}
+      propertyPath: InitialModule.startRotationX.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2568813226947275614, guid: 39b051acb09f0bd4cbf6fcbf379d1c65,
+        type: 3}
+      propertyPath: InitialModule.startRotationY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3134181854674989986, guid: 39b051acb09f0bd4cbf6fcbf379d1c65,
         type: 3}
       propertyPath: m_Name
@@ -593,22 +627,22 @@ PrefabInstance:
     - target: {fileID: 5365125983695579069, guid: 39b051acb09f0bd4cbf6fcbf379d1c65,
         type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 4.5905e-41
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5365125983695579069, guid: 39b051acb09f0bd4cbf6fcbf379d1c65,
         type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: -3.0440003e+37
+      value: 1.4240123e-26
       objectReference: {fileID: 0}
     - target: {fileID: 5365125983695579069, guid: 39b051acb09f0bd4cbf6fcbf379d1c65,
         type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: NaN
+      value: 6.9e-43
       objectReference: {fileID: 0}
     - target: {fileID: 5365125983695579069, guid: 39b051acb09f0bd4cbf6fcbf379d1c65,
         type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 3e-45
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39b051acb09f0bd4cbf6fcbf379d1c65, type: 3}
