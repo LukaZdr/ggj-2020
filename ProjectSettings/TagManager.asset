@@ -10,6 +10,7 @@ TagManager:
   - BoltTarget
   - Kohlehaufen
   - Ofen
+  - Kork
   layers:
   - Default
   - TransparentFX
