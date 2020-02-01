@@ -436,6 +436,7 @@ GameObject:
   - component: {fileID: 757248468673445875}
   - component: {fileID: 6753580360313058640}
   - component: {fileID: 4184725322526211922}
+  - component: {fileID: 1274778952402627676}
   m_Layer: 0
   m_Name: "Wasserk\xF6rper"
   m_TagString: Untagged
@@ -537,6 +538,22 @@ MonoBehaviour:
   maxRaycastDistance: 100
   rayInterval: 20
   prefab: {fileID: 7654519025953170723, guid: 3dcb7f0b9db01db45835bd306884a205, type: 3}
+--- !u!114 &1274778952402627676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8959003759349756004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e76cab53c7af924a990be9b5d4bff6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generationRate: 1
+  tank:
+    capacity: 100
+    stored: 0
 --- !u!1001 &4832864523784878023
 PrefabInstance:
   m_ObjectHideFlags: 0
