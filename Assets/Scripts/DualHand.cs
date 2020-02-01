@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR;
 using Valve.VR.InteractionSystem;
 
 [RequireComponent(typeof(Interactable))]
@@ -19,12 +20,12 @@ public class DualHand : MonoBehaviour
     {
         hand = attachedHand;
         secondHand = hand.otherHand.transform;
-        hand.otherHand.enabled = false;
+        hand.otherHand.hapticAction = null;
     }
 
     private void OnDetachedFromHand(Hand hand)
     {
-        hand.otherHand.enabled = true;
+        hand.otherHand.hapticAction = SteamVR_Input.GetAction<SteamVR_Action_Vibration>("Haptic");
     }
 
     void FixedUpdate()
