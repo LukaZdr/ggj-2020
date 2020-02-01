@@ -218,12 +218,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 451511df39f95df4ba66cb116e7399d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 9004787295496598087, guid: 2a3da09ad29b99448b047f1b55b5db48,
+  projectile: {fileID: 2209877239868640678, guid: 16dfa7f5a22bd984382bf05f87f2b96d,
     type: 3}
   projectileSpawn: {fileID: 497220147602297560}
   bulletSpeed: 750
   despawnTime: 15
   shotsPerSec: 1
+  feedbackDuration: 0.3
+  feedbackFrequency: 180
+  feedbackAmplitude: 0.2
 --- !u!64 &1069598823367287476
 MeshCollider:
   m_ObjectHideFlags: 0

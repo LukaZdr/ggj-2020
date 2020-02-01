@@ -7,6 +7,8 @@ public class Aufplatzring : MonoBehaviour
     [SerializeField]
     GameObject boltPlaceholder;
     [SerializeField]
+    GameObject korkPlaceholder;
+    [SerializeField]
     float deleteDelay = 10f;
     [SerializeField]
     ParticleSystem[] particles = new ParticleSystem[2];
@@ -39,20 +41,30 @@ public class Aufplatzring : MonoBehaviour
             _gm.PlacedBolt();
 
             // Bolt
-            Destroy(other.gameObject);
             boltPlaceholder.SetActive(true);
-            this.GetComponent<Collider>().enabled = false;
-
-            //Animations
-            foreach (var ps in particles)
-            {
-                var em = ps.emission;
-                em.rateOverTime = 0;
-            }
-            this.GetComponent<Animator>().enabled = true;
-
-            //bye bye
-            Destroy(this.gameObject, deleteDelay);
+            destroy(other);
+        } else if (other.tag == "Kork")
+        {
+            // Kork
+            korkPlaceholder.SetActive(true);
+            destroy(other);
         }
+    }
+
+    private void destroy(Collider other)
+    {
+        Destroy(other.gameObject);
+        this.GetComponent<Collider>().enabled = false;
+
+        //Animations
+        foreach (var ps in particles)
+        {
+            var em = ps.emission;
+            em.rateOverTime = 0;
+        }
+        this.GetComponent<Animator>().enabled = true;
+
+        //bye bye
+        Destroy(this.gameObject, deleteDelay);
     }
 }
