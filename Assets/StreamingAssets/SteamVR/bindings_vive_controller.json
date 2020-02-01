@@ -225,15 +225,11 @@
                "inputs" : {},
                "mode" : "button",
                "path" : "/user/hand/right/input/trigger"
-            }
-         ]
-      },
-      "/actions/gun" : {
-         "sources" : [
+            },
             {
                "inputs" : {
                   "click" : {
-                     "output" : "/actions/gun/in/fire"
+                     "output" : "/actions/default/in/grabpinch"
                   }
                },
                "mode" : "button",
@@ -242,11 +238,49 @@
             {
                "inputs" : {
                   "click" : {
-                     "output" : "/actions/gun/in/fire"
+                     "output" : "/actions/default/in/grabpinch"
                   }
                },
                "mode" : "button",
                "path" : "/user/hand/right/input/trigger"
+            }
+         ]
+      },
+      "/actions/gun" : {
+         "haptics" : [
+            {
+               "output" : "/actions/gun/out/recoil",
+               "path" : "/user/hand/left/output/haptic"
+            },
+            {
+               "output" : "/actions/gun/out/recoil",
+               "path" : "/user/hand/right/output/haptic"
+            }
+         ],
+         "sources" : [
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/gun/in/fire"
+                  },
+                  "held" : {
+                     "output" : "/actions/gun/in/fire"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/left/input/trackpad"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/gun/in/fire"
+                  },
+                  "held" : {
+                     "output" : "/actions/gun/in/fire"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/right/input/trackpad"
             }
          ]
       },
