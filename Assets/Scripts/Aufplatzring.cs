@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -30,16 +30,13 @@ public class Aufplatzring : MonoBehaviour
         }
     }
 
-    // Im Erfolgsfall ist other = Bolzen
+    // Im Erfolgsfall ist other = Bolzen oder Korken
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Bolt" && leaking)
+        if (!leaking) return;
+        
+        if (other.tag == "Bolt")
         {
-            leaking = false;
-
-            // Score
-            _gm.PlacedBolt();
-
             // Bolt
             boltPlaceholder.SetActive(true);
             destroy(other);
@@ -53,8 +50,12 @@ public class Aufplatzring : MonoBehaviour
 
     private void destroy(Collider other)
     {
+        leaking = false;
         Destroy(other.gameObject);
         this.GetComponent<Collider>().enabled = false;
+
+        // Score
+        _gm.StuffedHole();
 
         //Animations
         foreach (var ps in particles)

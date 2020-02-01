@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void PlacedBolt()
+    public void StuffedHole()
     {
         if (lost) return;
 
