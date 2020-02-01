@@ -259,6 +259,9 @@ MonoBehaviour:
   bulletSpeed: 750
   despawnTime: 15
   shotsPerSec: 3.5
+  feedbackDuration: 0.1
+  feedbackFrequency: 50
+  feedbackAmplitude: 0.8
 --- !u!1 &5435801536791631576
 GameObject:
   m_ObjectHideFlags: 0
