@@ -11,6 +11,7 @@ public class Shovel : MonoBehaviour
     {
         if (other.tag == "Kohlehaufen")
         {
+            GameManager.instance.BurnedCoal();
             kohle.SetActive(true);
         }
         else if (other.tag == "Ofen")
