@@ -20,8 +20,11 @@ namespace Pressure
 
         void FixedUpdate()
         {
-            _rotation.x = (pressureSource.pressure / 100 * (maxRoation - minRotation)) + minRotation;
-            transform.localEulerAngles = _rotation;
+            if (pressureSource != null)
+            {
+                _rotation.x = (pressureSource.pressure / 100 * (maxRoation - minRotation)) + minRotation;
+                transform.localEulerAngles = _rotation;
+            }
         }
     }
 }
