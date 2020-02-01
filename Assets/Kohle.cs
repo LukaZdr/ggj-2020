@@ -9,7 +9,7 @@ public class Kohle : MonoBehaviour
     {
         if (other.tag == "Ofen")
         {
-            FindObjectOfType<GameManager>().BurnedCoal();
+            GameManager.instance.BurnedCoal();
 
             GameObject.Destroy(this.gameObject);
         }

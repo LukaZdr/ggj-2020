@@ -14,6 +14,11 @@ public class GameManager : MonoBehaviour
     public int coalBurned = 0;
     public bool lost = false;
 
+
+
+    //-------------------------------------------------
+    // Singleton instance of the GameManager. Only one can exist at a time.
+    //-------------------------------------------------
     private static GameManager _instance;
     public static GameManager instance
     {
@@ -23,7 +28,6 @@ public class GameManager : MonoBehaviour
             {
                 _instance = FindObjectOfType<GameManager>();
             }
-
             return _instance;
         }
     }
