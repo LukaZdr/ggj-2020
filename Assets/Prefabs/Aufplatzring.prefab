@@ -63,6 +63,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boltPlaceholder: {fileID: 7520010444473451657}
   deleteDelay: 10
+  particles:
+  - {fileID: 6219953124476572912}
+  - {fileID: 9085381960544403565}
 --- !u!95 &4541537268302434055
 Animator:
   serializedVersion: 3
@@ -71,7 +74,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7654519025953170723}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: f02c2f735229f174fa8be52623777137, type: 2}
   m_CullingMode: 0
@@ -187,6 +190,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wasserleck
       objectReference: {fileID: 0}
+    - target: {fileID: 3985319841997591155, guid: 78f50ddc80f5a5645b2e443ca9abc574,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 7907092295980589426, guid: 78f50ddc80f5a5645b2e443ca9abc574,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -267,6 +275,18 @@ PrefabInstance:
 --- !u!4 &1745430290766023385 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8729672300280155226, guid: 78f50ddc80f5a5645b2e443ca9abc574,
+    type: 3}
+  m_PrefabInstance: {fileID: 6998318043274462851}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &6219953124476572912 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3985319841997591155, guid: 78f50ddc80f5a5645b2e443ca9abc574,
+    type: 3}
+  m_PrefabInstance: {fileID: 6998318043274462851}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &9085381960544403565 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2236819995133282030, guid: 78f50ddc80f5a5645b2e443ca9abc574,
     type: 3}
   m_PrefabInstance: {fileID: 6998318043274462851}
   m_PrefabAsset: {fileID: 0}

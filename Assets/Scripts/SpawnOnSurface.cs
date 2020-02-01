@@ -21,9 +21,9 @@ public class SpawnOnSurface : MonoBehaviour
         _objectCollider = GetComponent<Collider>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        if (Time.time > 0 && ((int) Time.time) % rayInterval == 0)
+        if (Time.time > rayInterval && ((int) Time.time) % rayInterval == 0)
         {
             var direction = Random.onUnitSphere;
             var ray = new Ray(raySpawn.position, direction);
@@ -32,7 +32,7 @@ public class SpawnOnSurface : MonoBehaviour
             if (GetHitpoint(out hit))
             {
                 var go = Instantiate(prefab, hit.point, Quaternion.LookRotation(hit.normal));
-                go.transform.SetParent(this.transform);
+                //go.transform.SetParent(this.transform);
             }
         }
     }
