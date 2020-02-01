@@ -228,7 +228,7 @@ MonoBehaviour:
   feedbackDuration: 0.3
   feedbackFrequency: 180
   feedbackAmplitude: 0.2
-  FireSound: {fileID: 2957340092012277986}
+  FireSoundSource: {fileID: 2957340092012277986}
 --- !u!64 &1069598823367287476
 MeshCollider:
   m_ObjectHideFlags: 0

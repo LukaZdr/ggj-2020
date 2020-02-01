@@ -199,6 +199,7 @@ MonoBehaviour:
   particles:
   - {fileID: 6219953124476572912}
   - {fileID: 9085381960544403565}
+  audioSource: {fileID: 7813013183606776761}
 --- !u!95 &4541537268302434055
 Animator:
   serializedVersion: 3

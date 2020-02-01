@@ -18,7 +18,7 @@ public class Gun : MonoBehaviour
     public float feedbackFrequency = 0;
     [Range(0f, 1f)]
     public float feedbackAmplitude = 1;
-    public AudioSource FireSound;
+    public AudioSource FireSoundSource;
 
     private SteamVR_Action_Boolean actionFire = SteamVR_Input.GetAction<SteamVR_Action_Boolean>("gun", "fire");
     private SteamVR_Action_Vibration actionVibration = SteamVR_Input.GetVibrationAction("gun", "recoil");
@@ -50,9 +50,9 @@ public class Gun : MonoBehaviour
 
     public void Fire(SteamVR_Input_Sources source)
     {
-        if (FireSound && !FireSound.isPlaying)
+        if (FireSoundSource)
         {
-            FireSound.Play();
+            FireSoundSource.PlayOneShot(FireSoundSource.clip);
         }
         lastShotTime = Time.time;
         GameObject _projectile = Instantiate(projectile, projectileSpawn.position, projectileSpawn.rotation * projectile.transform.rotation);
