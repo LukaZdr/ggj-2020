@@ -48,6 +48,19 @@ public class Aufplatzring : MonoBehaviour
         }
     }
 
+    void OnHandHoverBegin()
+    {
+        setParticleEmissionEnabled(false);
+    }
+
+    void OnHandHoverEnd()
+    {
+        if (!boltPlaceholder.activeSelf && !korkPlaceholder.activeSelf)
+        {
+            setParticleEmissionEnabled(true);
+        }
+    }
+
     private void destroy(Collider other)
     {
         leaking = false;
@@ -58,14 +71,19 @@ public class Aufplatzring : MonoBehaviour
         _gm.StuffedHole();
 
         //Animations
-        foreach (var ps in particles)
-        {
-            var em = ps.emission;
-            em.rateOverTime = 0;
-        }
+        setParticleEmissionEnabled(false);
         this.GetComponent<Animator>().enabled = true;
 
         //bye bye
         Destroy(this.gameObject, deleteDelay);
+    }
+
+    private void setParticleEmissionEnabled(bool enabled)
+    {
+        foreach (var ps in particles)
+        {
+            var em = ps.emission;
+            em.enabled = enabled;
+        }
     }
 }
