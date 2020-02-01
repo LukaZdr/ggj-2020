@@ -15,14 +15,18 @@ public class SpawnOnSurface : MonoBehaviour
     public GameObject prefab;
 
     private Collider _objectCollider;
+    private GameManager _gm;
 
     void Start()
     {
         _objectCollider = GetComponent<Collider>();
+        _gm = GameManager.instance;
     }
 
     void FixedUpdate()
     {
+        if (_gm.lost) return;
+
         if (Time.time > rayInterval && ((int) Time.time) % rayInterval == 0)
         {
             var direction = Random.onUnitSphere;
@@ -32,7 +36,6 @@ public class SpawnOnSurface : MonoBehaviour
             if (GetHitpoint(out hit))
             {
                 var go = Instantiate(prefab, hit.point, Quaternion.LookRotation(hit.normal));
-                //go.transform.SetParent(this.transform);
             }
         }
     }
