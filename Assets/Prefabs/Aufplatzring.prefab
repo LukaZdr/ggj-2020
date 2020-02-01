@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7654519025953170722}
   - component: {fileID: 3880186570774418524}
   - component: {fileID: -2033453540508020194}
+  - component: {fileID: 4541537268302434055}
   m_Layer: 0
   m_Name: Aufplatzring
   m_TagString: BoltTarget
@@ -60,6 +61,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boltPlaceholder: {fileID: 7520010444473451657}
+  deleteDelay: 10
+--- !u!95 &4541537268302434055
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7654519025953170723}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f02c2f735229f174fa8be52623777137, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1489319277157103310
 PrefabInstance:
   m_ObjectHideFlags: 0

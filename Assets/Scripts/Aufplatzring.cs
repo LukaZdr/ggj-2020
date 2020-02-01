@@ -7,7 +7,7 @@ public class Aufplatzring : MonoBehaviour
     [SerializeField]
     GameObject boltPlaceholder;
     [SerializeField]
-    float deleteDelay = 15f;
+    float deleteDelay = 10f;
 
     // Im Erfolgsfall ist other = Bolzen
     void OnTriggerEnter(Collider other)
