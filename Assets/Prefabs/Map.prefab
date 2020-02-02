@@ -193,6 +193,7 @@ Transform:
   - {fileID: 1647609568952117669}
   - {fileID: 1647609568930493182}
   - {fileID: 1647609568853285211}
+  - {fileID: 6034764001405529954}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1849,8 +1850,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: pressureGauge (red)
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1657212478469197009, guid: 628ef5aa8c5e75b479c1e2583d1fe5a6, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 628ef5aa8c5e75b479c1e2583d1fe5a6, type: 3}
 --- !u!4 &2023455887102820807 stripped
 Transform:
@@ -2663,6 +2663,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1647609567882448397}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1647609567934044459
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1647609567476862793}
+    m_Modifications:
+    - target: {fileID: 4999758435087627845, guid: b7f416ba53673634391cf232b8f7bd03,
+        type: 3}
+      propertyPath: m_Name
+      value: Status Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999758435087627849, guid: b7f416ba53673634391cf232b8f7bd03,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.038
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999758435087627849, guid: b7f416ba53673634391cf232b8f7bd03,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.8873
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999758435087627849, guid: b7f416ba53673634391cf232b8f7bd03,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.8671
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999758435087627849, guid: b7f416ba53673634391cf232b8f7bd03,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.06336403
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999758435087627849, guid: b7f416ba53673634391cf232b8f7bd03,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.89606315
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999758435087627849, guid: b7f416ba53673634391cf232b8f7bd03,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.41784108
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999758435087627849, guid: b7f416ba53673634391cf232b8f7bd03,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.1358846
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999758435087627849, guid: b7f416ba53673634391cf232b8f7bd03,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999758435087627849, guid: b7f416ba53673634391cf232b8f7bd03,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999758435087627849, guid: b7f416ba53673634391cf232b8f7bd03,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -197.24599
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999758435087627849, guid: b7f416ba53673634391cf232b8f7bd03,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b7f416ba53673634391cf232b8f7bd03, type: 3}
+--- !u!4 &6034764001405529954 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4999758435087627849, guid: b7f416ba53673634391cf232b8f7bd03,
+    type: 3}
+  m_PrefabInstance: {fileID: 1647609567934044459}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1647609568025174559
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3327,6 +3402,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 237d0483633a0cf47a9b57a6bbad9db6, type: 3}
+--- !u!4 &6123427149080615566 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4766977330817737972, guid: 237d0483633a0cf47a9b57a6bbad9db6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1647609568371801722}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &535242914483114534 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1274778952402627676, guid: 237d0483633a0cf47a9b57a6bbad9db6,
@@ -3339,12 +3420,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e76cab53c7af924a990be9b5d4bff6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &6123427149080615566 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4766977330817737972, guid: 237d0483633a0cf47a9b57a6bbad9db6,
-    type: 3}
-  m_PrefabInstance: {fileID: 1647609568371801722}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1647609568442032177
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5052,8 +5127,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: pressureGauge (green)
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1657212478469197009, guid: 628ef5aa8c5e75b479c1e2583d1fe5a6, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 628ef5aa8c5e75b479c1e2583d1fe5a6, type: 3}
 --- !u!4 &4288703268472330269 stripped
 Transform:
@@ -5203,7 +5277,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Play Area
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6856571627641342632, guid: 40b3091c624efca44a2d168cbfd57e79, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 40b3091c624efca44a2d168cbfd57e79, type: 3}
 --- !u!4 &1647609567936038448 stripped
 Transform:
@@ -5309,8 +5384,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: pressureGauge (blue)
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1657212478469197009, guid: 628ef5aa8c5e75b479c1e2583d1fe5a6, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 628ef5aa8c5e75b479c1e2583d1fe5a6, type: 3}
 --- !u!4 &6551553603791375775 stripped
 Transform:
