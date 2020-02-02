@@ -82,6 +82,8 @@ public class Aufplatzring : MonoBehaviour
 
     private void setParticleEmissionAndSoundEnabled(bool enabled)
     {
+        leaking = enabled;
+
         foreach (var ps in particles)
         {
             var em = ps.emission;
