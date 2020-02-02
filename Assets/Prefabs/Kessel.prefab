@@ -640,7 +640,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 582d2cfd4842c954d82eba0d037da054, type: 2}
+  - {fileID: 2100000, guid: f2417de23d4ef8c4bb39e64398f856f6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -689,7 +689,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   raySpawn: {fileID: 3885514929760193958}
   maxRaycastDistance: 100
-  rayInterval: 20
+  spawnInterval: 60
   prefab: {fileID: 7654519025953170723, guid: 3dcb7f0b9db01db45835bd306884a205, type: 3}
 --- !u!114 &1274778952402627676
 MonoBehaviour:
@@ -709,6 +709,9 @@ MonoBehaviour:
   tank:
     size: 300
     stored: 0
+  startLeakingAt: 50
+  minLeakInterval: 2
+  maxLeakInterval: 30
 --- !u!1001 &3352218852442320151
 PrefabInstance:
   m_ObjectHideFlags: 0
