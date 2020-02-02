@@ -18,7 +18,6 @@ namespace Pressure
             maxInputCapacity = (maxDraw + minDraw) / 2;
         }
 
-
         override protected void FixedUpdate()
         {
             base.FixedUpdate();

@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public int nailedHoles = 0;
     public float coalBurned = 0;
     public bool lost = false;
+    public float steamGenerated = 0;
 
 
 
@@ -62,6 +63,11 @@ public class GameManager : MonoBehaviour
         if (lost) return;
 
         coalBurned+=value;
+    }
+
+    public void GeneratedSteam(float value)
+    {
+        steamGenerated += value;
     }
 
     public void GameOver()

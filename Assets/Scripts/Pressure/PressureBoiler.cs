@@ -31,9 +31,11 @@ namespace Pressure
 
         void FixedUpdate()
         {
+            var previousStored = tank.stored;
             tank.stored = Mathf.Clamp(tank.stored + generationRate * Time.fixedDeltaTime, 0, tank.size);
-            var x = DistributeSteam(tank.stored);
-            tank.stored -= x;
+            tank.stored -= DistributeSteam(tank.stored);
+
+            GameManager.instance.GeneratedSteam(tank.stored - previousStored);
 
             if (pressure >= startLeakingAt)
             {
