@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 1814605641571572259}
   - component: {fileID: 8039352219682806426}
   - component: {fileID: 4014935088609009153}
-  - component: {fileID: 1069598823367287476}
+  - component: {fileID: 3425448930267267873}
   m_Layer: 0
   m_Name: Kork-gun
   m_TagString: Untagged
@@ -137,7 +137,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &1814605641571572259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,8 +229,8 @@ MonoBehaviour:
   feedbackFrequency: 180
   feedbackAmplitude: 0.2
   FireSoundSource: {fileID: 2957340092012277986}
---- !u!64 &1069598823367287476
-MeshCollider:
+--- !u!136 &3425448930267267873
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -239,10 +239,10 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2534964839176971238, guid: 378454c42bf59294b88cf66d9320869b, type: 3}
+  m_Radius: 0.067382105
+  m_Height: 0.5199221
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: -0.01847127}
 --- !u!1 &4605117521918483794
 GameObject:
   m_ObjectHideFlags: 0

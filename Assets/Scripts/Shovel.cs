@@ -2,21 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(CoalContainer))]
 public class Shovel : MonoBehaviour
 {
     [SerializeField]
     GameObject kohle;
-    // Im Erfolgsfall ist other = kohlehaufen
-    void OnTriggerEnter(Collider other)
+    [SerializeField]
+    float coalValue = 10;
+
+    private CoalContainer coalContainer;
+
+    void Start()
+    {
+        coalContainer = this.GetComponent<CoalContainer>();
+    }
+    
+    void FixedUpdate()
+    {
+        if (coalContainer.coalValue <= 0)
+        {
+            kohle.SetActive(false);
+        }
+    }
+
+        // Im Erfolgsfall ist other = kohlehaufen
+        void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Kohlehaufen")
         {
-            GameManager.instance.BurnedCoal();
             kohle.SetActive(true);
-        }
-        else if (other.tag == "Ofen")
-        {
-            kohle.SetActive(false);
+            coalContainer.coalValue = coalValue;
         }
     }
 }

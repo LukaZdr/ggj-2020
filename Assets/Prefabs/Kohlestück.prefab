@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1941912281940877193}
   - component: {fileID: 1769313097014593857}
   - component: {fileID: 3892998288984491407}
-  - component: {fileID: 6086797426494163707}
+  - component: {fileID: 6478552442509407770}
   m_Layer: 0
   m_Name: "Kohlest\xFCck"
   m_TagString: Untagged
@@ -219,7 +219,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   interactable: {fileID: 0}
---- !u!114 &6086797426494163707
+--- !u!114 &6478552442509407770
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -228,6 +228,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1110803709393275199}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a16deea650907545a4f8d75992e3651, type: 3}
+  m_Script: {fileID: 11500000, guid: 3986fa851ba5ce74abc5662a3fb09795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coalValue: 1
+  destroyOnConsumption: 1
