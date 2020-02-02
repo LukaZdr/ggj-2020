@@ -384,7 +384,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 9004787295496598087, guid: 2a3da09ad29b99448b047f1b55b5db48,
     type: 3}
-  projectileSpawn: {fileID: 0}
+  projectileSpawn: {fileID: 8793253487923234969}
   bulletSpeed: 750
   despawnTime: 15
   shotsPerSec: 3.5

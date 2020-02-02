@@ -10,6 +10,8 @@ public class DualHand : MonoBehaviour
     private Interactable interactable;
     private Hand hand;
     private Transform secondHand;
+    [SerializeField]
+    private Collider _collider;
 
     void Start()
     {
@@ -20,12 +22,12 @@ public class DualHand : MonoBehaviour
     {
         hand = attachedHand;
         secondHand = hand.otherHand.transform;
-        hand.otherHand.hapticAction = null;
+        _collider.enabled = false;
     }
 
     private void OnDetachedFromHand(Hand hand)
     {
-        hand.otherHand.hapticAction = SteamVR_Input.GetAction<SteamVR_Action_Vibration>("Haptic");
+        _collider.enabled = true;
     }
 
     void FixedUpdate()

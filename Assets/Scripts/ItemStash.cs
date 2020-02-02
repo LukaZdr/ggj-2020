@@ -25,14 +25,20 @@ public class ItemStash : MonoBehaviour
     {
         if (interactable.isHovering)
         {
-            foreach(var hand in interactable.hoveringHands)
+            try
             {
-                var grab = hand.GetBestGrabbingType();
-                if (grab != GrabTypes.None)
+                foreach (var hand in interactable.hoveringHands)
                 {
-                    var item = Instantiate(itemPrefab, hand.transform.position, hand.transform.rotation);
-                    hand.AttachObject(item, grab, attachmentFlags);
+                    var grab = hand.GetBestGrabbingType();
+                    if (grab != GrabTypes.None)
+                    {
+                        var item = Instantiate(itemPrefab, hand.transform.position, hand.transform.rotation);
+                        hand.AttachObject(item, grab, attachmentFlags);
+                    }
                 }
+            } catch(System.InvalidOperationException)
+            {
+
             }
         }
     }
