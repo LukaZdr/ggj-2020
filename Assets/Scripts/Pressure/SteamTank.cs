@@ -29,7 +29,7 @@ namespace Pressure
         /// </summary>
         public override float pressure => tank.fillPercent;
 
-        private bool blewnOut => blowoutTime + blowoutTimeout < Time.time;
+        private bool blewnOut => blowoutTime + blowoutTimeout > Time.time;
 
         private AudioSource[] _audioSources;
 
@@ -64,7 +64,7 @@ namespace Pressure
                 sinkCapacity = 0;
             }
 
-            if (tank.stored == tank.size)
+            if (tank.stored >= tank.size - 1)
             {
                 // blowout
                 tank.stored = 0;
