@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     [Header("Do not set these!")]
     public float leakage;
     public int nailedHoles = 0;
-    public int coalBurned = 0;
+    public float coalBurned = 0;
     public bool lost = false;
 
 
@@ -54,9 +54,14 @@ public class GameManager : MonoBehaviour
 
     public void BurnedCoal()
     {
+        BurnedCoal(1);
+    }
+
+    public void BurnedCoal(float value)
+    {
         if (lost) return;
 
-        coalBurned++;
+        coalBurned+=value;
     }
 
     public void GameOver()

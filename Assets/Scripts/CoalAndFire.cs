@@ -69,7 +69,9 @@ public class CoalAndFire : MonoBehaviour
 
     void decayCoal()
     {
+        var oldCoalLevel = coalLevel;
         coalLevel = Mathf.Max(0, coalLevel - coalLevelDecay);
+        GameManager.instance.BurnedCoal(oldCoalLevel - coalLevel);
     }
 
     public void AddCoalLevel(float level)
