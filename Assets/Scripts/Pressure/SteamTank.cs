@@ -4,6 +4,7 @@ using System.Collections;
 
 namespace Pressure
 {
+    [RequireComponent(typeof(AudioSource))]
     public class SteamTank : AbstractSteamSource, ISteamSink
     { 
         [Tooltip("How much steam this tank accepts (in liters per second)")]
@@ -30,6 +31,8 @@ namespace Pressure
 
         private bool blewnOut => blowoutTime + blowoutTimeout < Time.time;
 
+        private AudioSource[] _audioSources;
+
         public float SinkSteam(float amount)
         {
             amount = Mathf.Min(amount, sinkCapacity);
@@ -43,6 +46,8 @@ namespace Pressure
             blowoutTime = -blowoutTimeout;
             sinkCapacity = maxInputCapacity;
             source?.RegisterSink(this);
+
+            _audioSources = GetComponents<AudioSource>();
         }
 
         private void FixedUpdate()
@@ -61,8 +66,11 @@ namespace Pressure
 
             if (tank.stored == tank.size)
             {
+                // blowout
                 tank.stored = 0;
                 blowoutTime = Time.time;
+                foreach (var source in _audioSources)
+                    source.Play();
             }
         }
     }
