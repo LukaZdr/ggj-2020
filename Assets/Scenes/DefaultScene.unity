@@ -496,6 +496,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a3da09ad29b99448b047f1b55b5db48, type: 3}
+--- !u!1 &1631245000 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1231615717231251623, guid: ba131d1eab9a54f4c91ee330c9107aed,
+    type: 3}
+  m_PrefabInstance: {fileID: 1434325624076383904}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1631245004
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631245000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5600642609539370624, guid: ed3454640cdb3ca4db7bf61001aa3747, type: 3}
 --- !u!1001 &1644626541
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -632,6 +652,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5656234416957972008, guid: ba131d1eab9a54f4c91ee330c9107aed,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9154950183944144178, guid: ba131d1eab9a54f4c91ee330c9107aed,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.892
+      objectReference: {fileID: 0}
+    - target: {fileID: 9154950183944144178, guid: ba131d1eab9a54f4c91ee330c9107aed,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.215
+      objectReference: {fileID: 0}
+    - target: {fileID: 9154950183944144178, guid: ba131d1eab9a54f4c91ee330c9107aed,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.828
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba131d1eab9a54f4c91ee330c9107aed, type: 3}
 --- !u!1001 &1647609569012541994
@@ -700,41 +740,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2285705632427912704, guid: 359c4b9fa52530e45b535e65131d2c9a,
-        type: 3}
-      propertyPath: m_BoundingSphereOverride.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2285705632427912704, guid: 359c4b9fa52530e45b535e65131d2c9a,
-        type: 3}
-      propertyPath: m_BoundingSphereOverride.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2285705632427912704, guid: 359c4b9fa52530e45b535e65131d2c9a,
-        type: 3}
-      propertyPath: m_BoundingSphereOverride.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2285705632427912704, guid: 359c4b9fa52530e45b535e65131d2c9a,
-        type: 3}
-      propertyPath: m_BoundingSphereOverride.w
-      value: 0.0000000025828442
-      objectReference: {fileID: 0}
-    - target: {fileID: 5642994300194680338, guid: 359c4b9fa52530e45b535e65131d2c9a,
-        type: 3}
-      propertyPath: resizeSpeed
-      value: 0.00001
-      objectReference: {fileID: 0}
-    - target: {fileID: 5642994300194680338, guid: 359c4b9fa52530e45b535e65131d2c9a,
-        type: 3}
-      propertyPath: coalLevelDecaySpeed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5642994300194680338, guid: 359c4b9fa52530e45b535e65131d2c9a,
-        type: 3}
-      propertyPath: coalLevelDecay
-      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 359c4b9fa52530e45b535e65131d2c9a, type: 3}
