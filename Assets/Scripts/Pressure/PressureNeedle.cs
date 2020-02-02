@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace Pressure
 {
-    public class PressureGauge : MonoBehaviour
+    public class PressureNeedle : MonoBehaviour
     {
         public float minRotation = 0;
         public float maxRoation = 180;
@@ -16,6 +16,9 @@ namespace Pressure
         private void Start()
         {
             _rotation = transform.localEulerAngles;
+
+            if (pressureSource == null)
+                Debug.LogWarning($"{this.name} pressureSource is null");
         }
 
         void FixedUpdate()
