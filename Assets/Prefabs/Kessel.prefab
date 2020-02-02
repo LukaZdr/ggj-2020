@@ -704,7 +704,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   generationRate: 5
   tank:
-    size: 200
+    size: 300
     stored: 0
 --- !u!1001 &3352218852442320151
 PrefabInstance:

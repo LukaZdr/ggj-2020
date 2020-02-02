@@ -40,7 +40,7 @@ namespace Pressure
             // Actually distribute steam
             float actuallyTaken = 0;
             for (int i = 0; i < _sinks.Count; i++)
-                actuallyTaken = _sinks[i].SinkSteam(sinkGets[i]);
+                actuallyTaken += _sinks[i].SinkSteam(sinkGets[i]);
             return actuallyTaken;
         }
     }
