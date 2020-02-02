@@ -21,12 +21,15 @@ namespace Pressure
             return amount;
         }
 
-        void Start()
+        virtual protected void Start()
         {
+            if (source == null)
+                Debug.LogWarning($"{name} steamSource is null");
+
             source?.RegisterSink(this);
         }
 
-        void FixedUpdate()
+        virtual protected void FixedUpdate()
         {
             sinkCapacity = Mathf.Min(sinkCapacity + maxInputCapacity * Time.fixedDeltaTime, maxInputCapacity);
         }

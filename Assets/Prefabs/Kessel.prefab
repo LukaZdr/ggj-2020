@@ -468,6 +468,7 @@ MonoBehaviour:
   coalLevelDecaySpeed: 1.5
   coalMaxLevel: 20
   startingCoalLevel: 15
+  boiler: {fileID: 1274778952402627676}
 --- !u!114 &6266645940480130339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -703,8 +704,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generationRate: 5
+  maxGenerationRate: 10
+  minGenerationRate: 0
   tank:
-    size: 200
+    size: 300
     stored: 0
 --- !u!1001 &3352218852442320151
 PrefabInstance:
