@@ -13,6 +13,10 @@ namespace Pressure
         public AbstractSteamSource source;
         [SerializeField]
         public SteamContainer tank = new SteamContainer(100, 0);
+        [Tooltip("Time which this tank needs before it can accept steam again after a blowout")]
+        public float blowoutTimeout = 20;
+
+        private float blowoutTime = 0;
 
         /// <summary>
         /// How much steam this sink would accept right now (in liters pers second)
@@ -24,6 +28,8 @@ namespace Pressure
         /// </summary>
         public override float pressure => tank.fillPercent;
 
+        private bool blewnOut => blowoutTime + blowoutTimeout < Time.time;
+
         public float SinkSteam(float amount)
         {
             amount = Mathf.Min(amount, sinkCapacity);
@@ -34,6 +40,7 @@ namespace Pressure
 
         private void Start()
         {
+            blowoutTime = -blowoutTimeout;
             sinkCapacity = maxInputCapacity;
             source?.RegisterSink(this);
         }
@@ -43,8 +50,20 @@ namespace Pressure
             var x = DistributeSteam(tank.stored);
             tank.stored -= x;
 
-            // capacity regenerates up to a maximum of maxInputCapacity and remaining tank size
-            sinkCapacity = Mathf.Min(sinkCapacity + maxInputCapacity * Time.fixedDeltaTime, tank.size - tank.stored, maxInputCapacity);
+            if (!blewnOut)
+            {
+                // capacity regenerates up to a maximum of maxInputCapacity and remaining tank size
+                sinkCapacity = Mathf.Min(sinkCapacity + maxInputCapacity * Time.fixedDeltaTime, tank.size - tank.stored, maxInputCapacity);
+            } else
+            {
+                sinkCapacity = 0;
+            }
+
+            if (tank.stored == tank.size)
+            {
+                tank.stored = 0;
+                blowoutTime = Time.time;
+            }
         }
     }
 }
