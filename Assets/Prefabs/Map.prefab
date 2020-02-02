@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxInputCapacity: 100
-  source: {fileID: 0}
+  source: {fileID: 8644085650070012518}
   maxDraw: 4
   minDraw: 2
 --- !u!1 &1647609567363300019
@@ -1113,7 +1113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxInputCapacity: 100
-  source: {fileID: 0}
+  source: {fileID: 531152544436627327}
   maxDraw: 8
   minDraw: 0
 --- !u!1001 &1007444481968326493
@@ -1289,7 +1289,7 @@ PrefabInstance:
         type: 3}
       propertyPath: pressureSource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8644085650070012518}
     - target: {fileID: 7256852198696851180, guid: 8777dec10c81a2943a05678745607b22,
         type: 3}
       propertyPath: m_Name
@@ -4878,7 +4878,7 @@ PrefabInstance:
         type: 3}
       propertyPath: pressureSource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 531152544436627327}
     - target: {fileID: 7256852198696851180, guid: 8777dec10c81a2943a05678745607b22,
         type: 3}
       propertyPath: m_Name
