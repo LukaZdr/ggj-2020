@@ -12,14 +12,16 @@ namespace Pressure
         [Tooltip("How much steam this machine draws at minimum (in liters per second)")]
         public float minDraw = 0.5f;
 
-        void Start()
+        override protected void Start()
         {
+            base.Start();
             maxInputCapacity = (maxDraw + minDraw) / 2;
         }
 
 
-        void FixedUpdate()
+        override protected void FixedUpdate()
         {
+            base.FixedUpdate();
             maxInputCapacity = Mathf.Min(maxDraw, maxInputCapacity + Random.Range(-0.01f, 0.01f));
         }
     }

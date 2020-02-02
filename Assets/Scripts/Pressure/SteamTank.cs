@@ -40,7 +40,8 @@ namespace Pressure
 
         private void FixedUpdate()
         {
-            tank.stored -= DistributeSteam(tank.stored);
+            var x = DistributeSteam(tank.stored);
+            tank.stored -= x;
 
             // capacity regenerates up to a maximum of maxInputCapacity and remaining tank size
             sinkCapacity = Mathf.Min(sinkCapacity + maxInputCapacity * Time.fixedDeltaTime, tank.size - tank.stored, maxInputCapacity);
