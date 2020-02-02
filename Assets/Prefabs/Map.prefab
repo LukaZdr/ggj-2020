@@ -398,8 +398,8 @@ MonoBehaviour:
   maxInputCapacity: 1
   source: {fileID: 535242914483114534}
   tank:
-    size: 100
-    stored: 0
+    size: 200
+    stored: 200
 --- !u!1 &1647609568666976810
 GameObject:
   m_ObjectHideFlags: 0
@@ -730,8 +730,8 @@ MonoBehaviour:
   maxInputCapacity: 1
   source: {fileID: 535242914483114534}
   tank:
-    size: 100
-    stored: 0
+    size: 200
+    stored: 200
 --- !u!1 &1647609568853285210
 GameObject:
   m_ObjectHideFlags: 0
@@ -1039,8 +1039,8 @@ MonoBehaviour:
   maxInputCapacity: 1
   source: {fileID: 535242914483114534}
   tank:
-    size: 100
-    stored: 0
+    size: 200
+    stored: 200
 --- !u!1 &1647609569183793095
 GameObject:
   m_ObjectHideFlags: 0
@@ -3219,6 +3219,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_BoundingSphereOverride.w
       value: 0.0000000025828442
+      objectReference: {fileID: 0}
+    - target: {fileID: 1274778952402627676, guid: 237d0483633a0cf47a9b57a6bbad9db6,
+        type: 3}
+      propertyPath: maxGenerationRate
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1274778952402627676, guid: 237d0483633a0cf47a9b57a6bbad9db6,
+        type: 3}
+      propertyPath: tank.size
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 3135688395935472787, guid: 237d0483633a0cf47a9b57a6bbad9db6,
         type: 3}

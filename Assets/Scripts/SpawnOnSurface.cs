@@ -10,7 +10,7 @@ public class SpawnOnSurface : MonoBehaviour
     [Tooltip("Maximum distance the ray will go until it is considered not-hitting")]
     public float maxRaycastDistance = 100;
     [Tooltip("How many seconds to wait between casting rays")]
-    public int rayInterval = 100;
+    public int spawnInterval = 60;
     [Tooltip("Prefab which gets instantiated on the objects surface")]
     public GameObject prefab;
 
@@ -27,16 +27,14 @@ public class SpawnOnSurface : MonoBehaviour
     {
         if (_gm.lost) return;
 
-        if (Time.time > rayInterval && ((int) Time.time) % rayInterval == 0)
+        if (Time.time > spawnInterval && ((int) Time.time) % spawnInterval == 0)
         {
             var direction = Random.onUnitSphere;
             var ray = new Ray(raySpawn.position, direction);
 
             RaycastHit hit;
             if (GetHitpoint(out hit))
-            {
-                var go = Instantiate(prefab, hit.point, Quaternion.LookRotation(hit.normal));
-            }
+                Instantiate(prefab, hit.point, Quaternion.LookRotation(hit.normal));
         }
     }
 
@@ -46,7 +44,12 @@ public class SpawnOnSurface : MonoBehaviour
         var ray = new Ray(raySpawn.position, direction);
 
         // we intentionally dont use _objectCollider.Raycast() because we want to honor intersections with other objects
-        return Physics.Raycast(ray, out hit, maxRaycastDistance) && hit.collider == _objectCollider;
+        for (int i = 0; i < 15; i++)
+            if (Physics.Raycast(ray, out hit, maxRaycastDistance) && hit.collider == _objectCollider)
+                return true;
+
+        Physics.Raycast(ray, out hit, maxRaycastDistance);
+        return false;
     }
     
 }

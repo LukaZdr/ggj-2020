@@ -26,6 +26,8 @@ public class CoalAndFire : MonoBehaviour
     public float coalMaxLevel = 10;
     [SerializeField]
     public float startingCoalLevel = 7;
+    [Tooltip("Boiler which is fueled by this fire")]
+    public Pressure.PressureBoiler boiler;
 
     private float coalLevel;
     private Vector3 coalMaxScale;
@@ -65,6 +67,8 @@ public class CoalAndFire : MonoBehaviour
             coal.transform.localScale = scale;
             applyFireSize(ratio);
         }
+
+        boiler.generationRate = ((boiler.maxGenerationRate - boiler.minGenerationRate) * ratio) + boiler.minGenerationRate;
     }
 
     void decayCoal()
