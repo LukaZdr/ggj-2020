@@ -69,6 +69,7 @@ namespace Pressure
                 // blowout
                 tank.stored = 0;
                 blowoutTime = Time.time;
+                Debug.Log($"Tank {name} blowout");
                 foreach (var source in _audioSources)
                     source.Play();
             }
