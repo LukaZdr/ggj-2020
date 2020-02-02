@@ -20,4 +20,4 @@ Manuals:
     - while placing the shovel dip the blade in the coal pile and carry carefully in the boiler
     - bolts you can place with your hands or shoot them with your Boltgun
 
-Video: https://youtu.be/34N6p9kF9sc 
+[Video](https://youtu.be/34N6p9kF9sc)
